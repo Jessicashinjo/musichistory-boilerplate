@@ -1,0 +1,141 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <!-- <link rel="stylesheet" href="/css/normalize.css"> -->
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+  <div id="list_music_view">
+    <section class="page">
+      <!--Top Navigation Bar-->
+      <div class="navBar">
+        <ul class="topList">
+          <li><a href="#" id="list_music">List Music</a></li>
+          <li><a href="#" id="add_music">Add Music</a></li>
+          <li><a href="#" id="profile">Profile</a></li>
+        </ul>
+      </div>
+
+
+      <div class="mainContent">
+        <!--Left Control Box-->
+        <div class="sideBar">
+          <section class="length">
+            <legend class="lengthLegend">Song Length:</legend>
+            <input class="width_setter" type="range" name="volume" min="0" max="100%">
+          </section>
+
+          <section class="artist">
+            <legend>Artist:</legend>
+            <input class="width_setter" name="artist" list="artist">
+            <datalist id="artist">
+              <option value="Shakira">
+              <option value="Beatles">
+              <option value="Frank Sinatra">
+              <option value="Queen">
+            </datalist>
+          </section>
+
+          <section class="albumList">
+            <legend>Album:</legend>
+            <input class="width_setter" name="album" list="album">
+            <datalist id="album">
+              <option value="Crazy Frogs">
+              <option value="Nacho Man">
+              <option value="Giant Potatoes">
+              <option value="Kind Killers">
+            </datalist>
+          </section>
+
+          <section class="genreList">
+            <legend class="genreLegend">Genre:</legend>
+            <ul class="col">
+              <li><input type="checkbox" name="Rock" value="Rock"> Rock</li>
+              <li><input type="checkbox" name="Pop" value="Pop"> Pop</li>
+              <li><input type="checkbox" name="Blues" value="Blues"> Blues</li>
+              <li><input type="checkbox" name="Classical" value="Classical"> Classical</li>
+              <li><input type="checkbox" name="Jazz" value="Jazz"> Jazz</li>
+              <li><input type="checkbox" name="Hip Hop" value="Hip Hop"> Hip Hop</li>
+            </ul>
+          </section>
+
+          <section class="filter">
+            <button>Filter</button>
+          </section>
+        </div>
+
+        <!--Right Info Result Box-->
+        <div id="songInfo">
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="add_music_view">
+
+  </div>
+  <script src="/node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>
+  <script src="/javascripts/songs.js" type="text/javascript"></script>
+</body>
+</html>
+
+<!-- Top bar -->
+<!-- Make Nav Bar -->
+<!-- Create 3 anchor elements -->
+<!-- Pin bar to top of page -->
+<!-- Add pipe character between anchor elements -->
+
+<!-- Side bar -->
+<!-- create song length bar -->
+<!-- create artist options drop down list -->
+<!-- album drop down list -->
+<!-- checkboxes -->
+<!-- filter button -->
+
+<!-- Right Bar -->
+<!-- ul with label -->
+<!-- add pipe characters -->
+<!-- repeat 4 times -->
+
+
+
+
+
+
+<!--         <section>
+          <h3 class="songName firstSongName">Faries Lie</h3>
+          <ul class="pipes">
+            <li class="name">Shakira</li>
+            <li class="album">Kind Killers</li>
+            <li class="genre">Classical</li>
+          </ul>
+        </section>
+        <section>
+          <h3 class="songName">Orange Pirates</h3>
+          <ul class="pipes">
+            <li class="name">Beatles</li>
+            <li class="album">Crazy Frogs</li>
+            <li class="genre">Hip Hop</li>
+          </ul>
+        </section>
+        <section>
+          <h3 class="songName">Monkey Business</h3>
+          <ul class="pipes">
+            <li class="name">Queen</li>
+            <li class="album">Nacho Man</li>
+            <li class="genre">Blues</li>
+          </ul>
+        </section>
+        <section>
+          <h3 class="songName">Perfectly Practical</h3>
+          <ul class="pipes">
+            <li class="name">Frank Sinatra</li>
+            <li class="album">Giant Potatoes</li>
+            <li class="genre">Rock</li>
+          </ul>
+        </section> -->
