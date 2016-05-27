@@ -33,6 +33,7 @@ Visit the [Music History mockup](https://moqups.com/chortlehoort/1E8LJX7r/) that
 
 ### Criteria
 
+
 1. Create five options for the artist select element of any artist that you enjoy.
 1. Create at least five options for the album select element. One, or more, album for each artist.
 1. The links in the navigation bar don't need to link to anything just yet, you can use `<a href="#">View music</a>` for now
@@ -58,5 +59,3 @@ Students must find and replace the > character in each item with a - character.
 Must add each string to the DOM in index.html in the main content area.
 
 {Song name} by {Artist} on the album {Album}
-
-
