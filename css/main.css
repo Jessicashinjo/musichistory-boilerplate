@@ -22,11 +22,10 @@
 	float: left;
 	display: inline;
     padding: 0 5px;
-	border-left: solid 2px black;
 }
 
-.topList li:first-child{
-    border-left: none;
+.topList li:last-child{
+    border-left: solid 2px black;
 }
 /*Navigation END*/
 
