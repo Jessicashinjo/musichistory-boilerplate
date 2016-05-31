@@ -1,0 +1,19 @@
+{
+  "songs2": [
+    {
+      "title": "Bananas",
+      "artist": "Shaniqua Smith",
+      "album": "Fruit Rocks Your Socks"
+    },
+     {
+       "title": "Sex on the Beach",
+      "artist": "Gin & Tonic",
+      "album": "Drinks on me"
+    },
+    {
+      "title": "Hot Sauce",
+      "artist": "Bin Bolin",
+      "album": "Burrito Shmito"
+    }
+  ]
+}

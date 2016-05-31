@@ -1,43 +1,52 @@
-var songs = {legs: "zztop", ironic: "alanis morisette", "welcome to the jungle": "guns and roses"};
 var list_music_view = $('.list_music_view');
 var list_music_link = $('#list_music');
 var add_music_view = $('.add_music_view');
 var add_music_link = $('#add_music');
+var songObjects = $('#songInfo');
+var domContent = "";
+var songArtist = [];
 
 list_music_link.hide();
 add_music_link.show();
 add_music_view.hide();
-// songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
-// songs[songs.length] = "The Logical Song > by Supertr@amp on the album Breakfast in America";
-// songs[songs.length] = "Another Brick in the Wall > by Pink Floyd on the album The Wall";
-// songs[songs.length] = "Welco(me to the Jungle > by Guns & Roses on the album Appetite for Destruction";
-// songs[songs.length] = "Ironi!c > by Alanis Moris*ette on the album Jagged Little Pill";
 
-        // <section>
-        //   <h3 class="songName firstSongName">Faries Lie</h3>
-        //   <ul class="pipes">
-        //     <li class="name">Shakira</li>
-        //     <li class="album">Kind Killers</li>
-        //     <li class="genre">Classical</li>
-        //   </ul>
-        // </section>
-
-placeholder = document.getElementById("songInfo");
-
-function insertInDom(argument) {
-  for (var i = 0 in songs) {
-    placeholder.innerHTML += "<section> <h3 class=\"songName\">" + songs[i] +
-    "</h3> <ul class=\"pipes\"> <li class=\"name\">" + songs[i] + "</li> </ul> </section>"
-  }
+function insertInDom() {
+  // var domContent = '';
+  // console.log("songArtist", songArtists);
+  songArtist.forEach( function (item, index){
+    console.log(item);
+     domContent +=
+      `<section>
+        <h3 class="songName">${item.title}</h3>
+        <ul class="pipes">
+          <li class="name">${item.artist}</li>
+          <li class="name">${item.album}</li>
+        </ul>
+        <button id="${index}">Delete</button>
+      </section>`;
+  })
+  songObjects.html(domContent);
 }
-insertInDom();
 
-console.log(placeholder);
+function buttonListener(songList) {
+  songList.forEach( (item, index) => {
+    $(`#${index}`).click( (event) => {
+      $(`#${index}`).closest('section').remove();
+      const position = songArtist.indexOf(item);
+      songArtist.splice(position, 1);
+      console.log("my position is", position);
+      console.log("Song Artist Array", songArtist);
+    })
+  })
+}
 
-//Make List Music visible and hide add Music
-// var list_music_link = $('');
+function click_more(songArray2) {
+  $('#more_button').click( (event) => {
+  })
+}
 
 
+//When List Music is clicked make List Music visible and hide add Music
 list_music_link.click( (event) => {
   event.preventDefault();
   list_music_link.hide();
@@ -48,6 +57,7 @@ list_music_link.click( (event) => {
   list_music_view.show();
 });
 
+//When Add Music is clicked make Add Music visible and hide List Music
 add_music_link.click( (event) => {
   event.preventDefault();
   list_music_link.show();
@@ -57,3 +67,28 @@ add_music_link.click( (event) => {
 
   add_music_view.show();
 });
+
+/*********************
+Add Music
+*********************/
+
+$('#add_button').click( (event) => {
+  var song_name = $('#song_name').val();
+  var artist = $('#artist_name').val();
+  var album = $('#album_name').val();
+  songArtist.push({title: `${song_name}`, artist: `${artist}`, album: `${album}`})
+  console.log("New Array", songArtist);
+  song_name = '';
+  artist = '';
+  album = '';
+});
+
+function objectJSON (songs, songs2){
+  songArtist = songs;
+  songs2.forEach( (item) => {
+    songArtist.push(item);
+  });
+  insertInDom();
+}
+
+musicHistory.getJSONinfo();

@@ -124,12 +124,15 @@ button {
 }
 /*Right side bar END*/
 
-/*toggle hidden view*/
-.hidden {
-  display: none;
+
+/*Add Music View*/
+
+.add_music_view {
+	width: 80%;
+	margin: auto;
 }
 
-/*toggle visible view*/
-.visible {
-  display: block;
+.input_music {
+	width: 30%;
+	margin: auto;
 }

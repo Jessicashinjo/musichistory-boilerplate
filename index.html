@@ -69,26 +69,29 @@
           </div>
 
           <!--Right Info Result Box-->
+
           <div id="songInfo">
 
           </div>
+          <button id="more_button">More</button>
+
         </div>
       </section>
     </div>
 
-
-
-    <div class="add_music_view" >
-      <h3>Add Your Own Music!</h3>
-      <section>
-        <p>
-          Insert Text here.
-        </p>
-      </section>
+    <div class="add_music_view">
+      <article class="input_music">
+        <h3>Add Your Own Music!</h3>
+        <p>Song Name: <input id="song_name" type="text" name="song_name" placeholder="E.g. Space Oddity"/></p>
+        <p>Artist: <input id="artist_name" type="text" name="artist" placeholder="E.g. David Bowie"/></p>
+        <p>Album: <input id="album_name" type="text" name="album" placeholder="E.g. Space Oddity"/></p>
+        <button type="button" name="button" id="add_button">Add</button>
+      </article>
     </div>
 
 
     <script src="/node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>
+    <script src="/javascripts/promise.js" type="text/javascript"></script>
     <script src="/javascripts/songs.js" type="text/javascript"></script>
   </body>
 </html>
@@ -110,42 +113,3 @@
 <!-- ul with label -->
 <!-- add pipe characters -->
 <!-- repeat 4 times -->
-
-
-
-
-
-
-<!--         <section>
-
-          <h3 class="songName firstSongName">Faries Lie</h3>
-          <ul class="pipes">
-            <li class="name">Shakira</li>
-            <li class="album">Kind Killers</li>
-            <li class="genre">Classical</li>
-          </ul>
-        </section>
-        <section>
-          <h3 class="songName">Orange Pirates</h3>
-          <ul class="pipes">
-            <li class="name">Beatles</li>
-            <li class="album">Crazy Frogs</li>
-            <li class="genre">Hip Hop</li>
-          </ul>
-        </section>
-        <section>
-          <h3 class="songName">Monkey Business</h3>
-          <ul class="pipes">
-            <li class="name">Queen</li>
-            <li class="album">Nacho Man</li>
-            <li class="genre">Blues</li>
-          </ul>
-        </section>
-        <section>
-          <h3 class="songName">Perfectly Practical</h3>
-          <ul class="pipes">
-            <li class="name">Frank Sinatra</li>
-            <li class="album">Giant Potatoes</li>
-            <li class="genre">Rock</li>
-          </ul>
-        </section> -->

@@ -1,0 +1,19 @@
+{
+  "songs": [
+    {
+      "title": "legs",
+      "artist": "zztop",
+      "album": "Those Monkeys"
+    },
+     {
+      "title": "ironic",
+      "artist": "alanis morisette",
+      "album": "More of this set"
+    },
+    {
+      "title": "welcome to the jungle",
+      "artist": "guns and roses",
+      "album": "Guns are better than roses"
+    }
+  ]
+}
