@@ -22,11 +22,10 @@
 	float: left;
 	display: inline;
     padding: 0 5px;
-	border-left: solid 2px black;
 }
 
-.topList li:first-child{
-    border-left: none;
+.topList li:last-child{
+    border-left: solid 2px black;
 }
 /*Navigation END*/
 
@@ -101,6 +100,10 @@ button {
 	width: 78%;
 }
 
+#songInfo section{
+	display: none;
+}
+
 .songName {
 	font-size: 1.5em;
 	clear: both;
@@ -125,12 +128,15 @@ button {
 }
 /*Right side bar END*/
 
-/*toggle hidden view*/
-.hidden {
-  display: none;
+
+/*Add Music View*/
+
+.add_music_view {
+	width: 80%;
+	margin: auto;
 }
 
-/*toggle visible view*/
-.visible {
-  display: block;
+.input_music {
+	width: 30%;
+	margin: auto;
 }
