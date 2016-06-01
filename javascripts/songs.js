@@ -26,7 +26,27 @@ function insertInDom() {
       </section>`;
   })
   songObjects.html(domContent);
+  show_more_less()
 }
+
+function show_more_less() {
+    song_size = $("#songInfo section").size();
+    x=3;
+    $('#songInfo section:lt('+x+')').show();
+    $('#more_button').click(function () {
+        x= (x+3 <= song_size) ? x+3 : song_size;
+        $('#songInfo section:lt('+x+')').show();
+    });
+    $('#less_button').click(function () {
+        x=(x-4<0) ? 3 : x-3;
+        $('#songInfo section').not(':lt('+x+')').hide();
+    });
+}
+
+// function click_more(songArray2) {
+//   $('#more_button').click( (event) => {
+//   })
+// }
 
 function buttonListener(songList) {
   songList.forEach( (item, index) => {
@@ -39,12 +59,6 @@ function buttonListener(songList) {
     })
   })
 }
-
-function click_more(songArray2) {
-  $('#more_button').click( (event) => {
-  })
-}
-
 
 //When List Music is clicked make List Music visible and hide add Music
 list_music_link.click( (event) => {
